@@ -1,0 +1,32 @@
+{
+	"manifest_version":2,
+	"name":"blocking3",
+	"version":"2.0",
+	  "permissions": [
+    "*://www.youtube.com/*","tabs" 
+  ],
+	"content_scripts":
+	[
+		{
+		"matches":[
+			"*://www.youtube.com/*" //specify the webpage //exemple: *://*github*(any url with github in it)
+		],
+		"js":["p5.js","p5.min.js","content.js"]
+	}
+],
+	"background":
+
+		{
+			"persistent": false,
+		"scripts":["background.js"]
+	},
+	"browser_action":
+	
+		{"default_icon":"ct.png",
+		"default_popup":"popup.html",
+		"default_title":"home"
+		}
+	
+
+
+}
