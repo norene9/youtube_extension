@@ -19,7 +19,11 @@
     
     <!-- Style -->
     <link rel="stylesheet" href="css/style.css">
-
+  <script src="https://www.gstatic.com/firebasejs/8.8.1/firebase-app.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/8.8.1/firebase.js"></script>
+    <script language="javascript" type="text/javascript" src="js/books.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.8.1/firebase-auth.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.8.1/firebase-database.js"></script>
     <title>Books</title>
   </head>
   <body>
@@ -90,18 +94,19 @@
       </div>
 
     <h1 class="choose">Add new book</h1>
-        <form action=>
+        <form name="myForm" onsubmit="return validateForm()" method="post" required>
       <div class="formcontainer">
   
       <div class="container">
         <label for="uname"><strong>Book's name</strong></label>&nbsp;&nbsp;
-        <input type="text" required>&nbsp;&nbsp;
+        <input type="text" name="fname" >&nbsp;&nbsp;
          <label for="a"><strong>Book's link</strong></label>&nbsp;&nbsp;
-        <input type="text" required>
+        <input type="text" name="furl" >
     
       </div>
-      <button type="submit" class="add">Add </button>
+      <input type="submit" value="Submit">
       <button class="cancel">Cancel</button>
+
 
     </form>
 </div>
