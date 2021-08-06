@@ -1,0 +1,41 @@
+body{
+ width: 400px;
+ min-height: 500px;
+ margin: 0;
+ background-color: #FFFBDB;
+ text-align: center;
+}
+
+.logo{
+ background-color: #FF0505;
+ width: 100%;
+ padding: 10px;
+}
+
+.logo > h1 {
+ color: white;
+ font-weight: 100;
+ margin: 0;
+}
+
+.form{
+ display: flex;
+ flex-direction: column;
+ justify-content: center;
+ align-items: center;
+ margin: 50px 40px;
+ margin-bottom: 25px;
+ border: 1px solid;
+ border-radius: 30px;
+ box-shadow: 0 2px 0 0  darkgray;
+}
+
+p{
+ font-size: 24px;
+}
+.btn{
+ background-color: #FBD5DE;
+ margin: 25px;
+ padding: 10px 20px;
+ border: none;
+}

@@ -1,0 +1,19 @@
+body{
+ width: 400px;
+ min-height: 500px;
+ margin: 0;
+ background-color: #FFFBDB;
+ text-align: center;
+}
+
+.logo{
+ background-color: #FF0505;
+ width: 100%;
+ padding: 10px;
+}
+
+.logo > h1 {
+ color: white;
+ font-weight: 100;
+ margin: 0;
+}
