@@ -9,11 +9,8 @@ body{
 .logo{
  background-color: #FF0505;
  width: 100%;
- padding: 10px;
 }
 
-.logo > h1 {
- color: white;
- font-weight: 100;
- margin: 0;
+.logo > img {
+ width: 10%;
 }

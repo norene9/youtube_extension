@@ -4,23 +4,27 @@
  <meta charset="UTF-8">
  <link rel="stylesheet" href="css/login.css">
  <title>login</title>
+ <script src="loginInit.js"></script>
  <script src="https://www.gstatic.com/firebasejs/8.8.1/firebase-app.js"></script>
  <script src="https://www.gstatic.com/firebasejs/8.8.1/firebase.js"></script>
  <script src="https://www.gstatic.com/firebasejs/8.8.1/firebase-auth.js"></script>
  <script src="https://www.gstatic.com/firebasejs/8.8.1/firebase-database.js"></script>
- <script src="back.js"></script>
+ 
 </head>
 <body>
  <div class="logo">
-  <h1>extension</h1>
+  <img src="youtube.png" alt="youtube kids logo">
  </div>
  <div class="form">
+  <form action="formLogin" id="formLogin">
   <p>login</p>
-  <input type="text" placeholder="Username">
-  <input type="password" placeholder="password">
+  <input type="text" placeholder="Username" name="user">
+  <input type="password" placeholder="password" name=password>
   <button type="submit" class="btn">LOGIN</button>
-  <a href="child.html" class="fpswd">Forget your password ?</a>
+  </form>
+  <a>Forget your password ?</a>
  </div>
- <p class="signup">New Here ? <a href="signup.html">Sign Up</a></p>
+ <p class="signup"> <a href="child.html"> New Here ?</a> <a href="signup.html">Sign Up</a></p>
+ <script src="backLogin.js"></script>
 </body>
 </html>

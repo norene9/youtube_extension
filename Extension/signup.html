@@ -6,20 +6,24 @@
 <script src="https://www.gstatic.com/firebasejs/8.8.1/firebase-app.js"></script>
 <script src="https://www.gstatic.com/firebasejs/8.8.1/firebase.js"></script>
 <script src="https://www.gstatic.com/firebasejs/8.8.1/firebase-auth.js"></script>
+ <script src="https://www.gstatic.com/firebasejs/8.8.1/firebase-database.js"></script>
  <title>signup</title>
 </head>
 <body>
  <div class="logo">
-  <h1>extension</h1>
+  <img src="youtube.png" alt="youtube kids logo">
  </div>
  <div class="form">
   <p>Signup</p>
-  <input type="text" placeholder="First Name">
-  <input type="text" placeholder="Last Name">
-  <input type="password" placeholder="Password">
-  <input type="password" placeholder="Confirm Password">
+  <form action="formSignup" id="formSignup">
+ <!--<input type="text" placeholder="First Name">-->
+  <input type="text" placeholder="username" name="username">
+  <input type="email" placeholder="email" name="email">
+  <input type="password" placeholder="Password" name="psw">
+  <input type="password" placeholder="Confirm Password" name="confirmPsw">
   <button type="submit" class="btn">SIGN UP</button>
+  </form>
  </div>
+ <script src="backSignup.js"></script>
 </body>
-<script>console.log("hello")</script>
 </html>

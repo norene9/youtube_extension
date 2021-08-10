@@ -11,5 +11,5 @@
  },
  "permissions":["webNavigation"],
  "manifest_version": 2,
- "content_security_policy": "script-src-elem 'self' blob: filesystem: unsafe-inline 'sha256-Ql3n7tC/2D6wSTlQY8RcOKXhq02zfdaSDviOhpvbYWw=' https://www.gstatic.com/firebasejs/8.8.1/firebase-app.js https://www.gstatic.com/firebasejs/8.8.1/firebase.js https://www.gstatic.com/firebasejs/8.8.1/firebase-auth.js https://www.gstatic.com/firebasejs/8.8.1/firebase-database.js ; object-src 'self';default-src 'self'"
+ "content_security_policy": " script-src-elem 'self' blob: filesystem: unsafe-inline 'sha256-Ql3n7tC/2D6wSTlQY8RcOKXhq02zfdaSDviOhpvbYWw=' https://www.gstatic.com/firebasejs/8.8.1/firebase-app.js https://www.gstatic.com/firebasejs/8.8.1/firebase.js https://www.gstatic.com/firebasejs/8.8.1/firebase-auth.js https://www.gstatic.com/firebasejs/8.8.1/firebase-database.js ; object-src 'self'; connect-src 'self' https://www.googleapis.com/identitytoolkit/v3/relyingparty/verifyPassword https://www.googleapis.com/identitytoolkit/v3/relyingparty/getAccountInfo https://www.googleapis.com/identitytoolkit/v3/relyingparty/signupNewUser; default-src 'self'"
 }

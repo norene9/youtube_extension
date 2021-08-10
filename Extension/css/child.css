@@ -4,18 +4,16 @@ body{
  margin: 0;
  background-color: #FFFBDB;
  text-align: center;
+ position: relative;
 }
 
 .logo{
  background-color: #FF0505;
  width: 100%;
- padding: 10px;
 }
 
-.logo > h1 {
- color: white;
- font-weight: 100;
- margin: 0;
+.logo > img {
+ width: 10%;
 }
 
 .form{
@@ -39,3 +37,7 @@ p{
  padding: 10px 20px;
  border: none;
 }
+
+footer {
+ position: absolute; 
+ bottom: 0;}
