@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ <meta charset="UTF-8">
+ <link rel="stylesheet" href="css/LOGIN.css">
+<script src="https://www.gstatic.com/firebasejs/8.8.1/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.8.1/firebase.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.8.1/firebase-auth.js"></script>
+ <script src="https://www.gstatic.com/firebasejs/8.8.1/firebase-database.js"></script>
+ <title>signup</title>
+</head>
+<body>
+ <div class="logo">
+  <img src="youtube.png" alt="youtube kids logo">
+ </div>
+ <div class="form">
+  <p>Signup</p>
+  <form action="formSignup" id="formSignup">
+ <!--<input type="text" placeholder="First Name">-->
+  <input type="text" placeholder="username" name="username">
+  <input type="email" placeholder="email" name="email">
+  <input type="password" placeholder="Password" name="psw">
+  <input type="password" placeholder="Confirm Password" name="confirmPsw">
+  <button type="submit" class="btn">SIGN UP</button>
+  </form>
+ </div>
+ <script src="backSignup.js"></script>
+</body>
+</html>
