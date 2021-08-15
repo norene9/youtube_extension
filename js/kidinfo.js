@@ -64,7 +64,7 @@ function gotData(data) {
            document.getElementById("book7id").innerHTML = keybook7;
        document.getElementById("book8id").innerHTML = keybook8;
          document.getElementById("book7id").innerHTML = keybook9;
-            if (book1) {   document.getElementById("btnbook1").innerHTML= '<button onclick="addbook1()">add book</button> ' ;}
+            if (book1) {   document.getElementById("btnbook1").innerHTML= '<button onclick="addbook1()">add book</button>' ;}
           if (book2) {   document.getElementById("btnbook2").innerHTML= '<button onclick="addbook2()">add book</button>' ;}
           if (book3) {  document.getElementById("btnbook3").innerHTML= '<button onclick="addbook3()">add book</button>' ;}
              if (book4) {   document.getElementById("btnbook4").innerHTML= '<button onclick="addbook4()">add book</button>' ;}
@@ -87,145 +87,6 @@ function gotData(data) {
 }
 
 
-function addbook1() {
-   var kid1id = document.getElementById("kid1id"); 
-   var book1id = document.getElementById("book1id"); 
-   var book1name = document.getElementById("book1");  
-    // Look at each fruit object!
-      var data = {
-  idkid: kid1id.innerHTML,
-  idbook : book1id.innerHTML,
-  namebook : book1name.innerHTML,
-
-}
-reading.push(data);
-    
-   
-}
-function addbook2() {
-   var kid1id = document.getElementById("kid1id"); 
-   var book2id = document.getElementById("book2id"); 
-   var book2name = document.getElementById("book2");  
-    // Look at each fruit object!
-      var data = {
-  idkid: kid1id.innerHTML,
-  idbook : book2id.innerHTML,
-  namebook : book2name.innerHTML,
-
-}
-reading.push(data);
-    
-   
-}
-function addbook3() {
-   var kid1id = document.getElementById("kid1id"); 
-   var book3id = document.getElementById("book3id"); 
-   var book3name = document.getElementById("book3");  
-    // Look at each fruit object!
-      var data = {
-  idkid: kid1id.innerHTML,
-  idbook : book3id.innerHTML,
-  namebook : book3name.innerHTML,
-
-}
-reading.push(data);
-    
-   
-}
-function addbook4() {
-   var kid1id = document.getElementById("kid1id"); 
-   var book3id = document.getElementById("book4id"); 
-   var book3name = document.getElementById("book4");  
-    // Look at each fruit object!
-      var data = {
-  idkid: kid1id.innerHTML,
-  idbook : book3id.innerHTML,
-  namebook : book3name.innerHTML,
-
-}
-reading.push(data);
-    
-   
-}
-function addbook5() {
-   var kid1id = document.getElementById("kid1id"); 
-   var book3id = document.getElementById("book5id"); 
-   var book3name = document.getElementById("book5");  
-    // Look at each fruit object!
-      var data = {
-  idkid: kid1id.innerHTML,
-  idbook : book3id.innerHTML,
-  namebook : book3name.innerHTML,
-
-}
-reading.push(data);
-    
-   
-}
-function addbook6() {
-   var kid1id = document.getElementById("kid1id"); 
-   var book3id = document.getElementById("book6id"); 
-   var book3name = document.getElementById("book6");  
-    // Look at each fruit object!
-      var data = {
-  idkid: kid1id.innerHTML,
-  idbook : book3id.innerHTML,
-  namebook : book3name.innerHTML,
-
-}
-reading.push(data);
-    
-   
-}
-function addbook7() {
-   var kid1id = document.getElementById("kid1id"); 
-   var book3id = document.getElementById("book7id"); 
-   var book3name = document.getElementById("book7");  
-    // Look at each fruit object!
-      var data = {
-  idkid: kid1id.innerHTML,
-  idbook : book3id.innerHTML,
-  namebook : book3name.innerHTML,
-
-}
-reading.push(data);
-    
-   
-}
-function addbook8() {
-   var kid1id = document.getElementById("kid1id"); 
-   var book3id = document.getElementById("book8id"); 
-   var book3name = document.getElementById("book8");  
-    // Look at each fruit object!
-      var data = {
-  idkid: kid1id.innerHTML,
-  idbook : book3id.innerHTML,
-  namebook : book3name.innerHTML,
-
-}
-reading.push(data);
-    
-   
-}
-function addbook9() {
-   var kid1id = document.getElementById("kid1id"); 
-   var book3id = document.getElementById("book9id"); 
-   var book3name = document.getElementById("book9");  
-    // Look at each fruit object!
-      var data = {
-  idkid: kid1id.innerHTML,
-  idbook : book3id.innerHTML,
-  namebook : book3name.innerHTML,
-
-}
-reading.push(data);
-    
-   
-}
-
-
-
-
 
 
 
@@ -237,43 +98,58 @@ function gotDatareading(data) {
   var reading = data.val();
   // Grab the keys to iterate over the object
   var keys = Object.keys(reading);
+
     var key = keys[0];
     var readingg1 = reading[key];
+
+
     var key = keys[1];
     var readingg2 = reading[key];
+      
     var key = keys[2];
     var readingg3 = reading[key];
+     
        var key = keys[3];
     var readingg4 = reading[key];
        var key = keys[4];
     var readingg5 = reading[key];
+
        var key = keys[5];
     var readingg6 = reading[key];
+
        var key = keys[6];
     var readingg7 = reading[key];
+
        var key = keys[7];
     var readingg8 = reading[key];
+    
        var key = keys[8];
     var readingg9 = reading[key];
+
        var key = keys[9];
     var readingg10 = reading[key];
+       
 
 
-if (readingg1) {    if (readingg1.idkid == kid1id.innerHTML) {
+if (readingg1) {      //pour verifier avant d'ajouter un livre 
+    document.getElementById("readingname1").innerHTML = readingg1.namebook;
+  if (readingg1.idkid == kid1id.innerHTML) {
    document.getElementById("bookreading1").innerHTML = readingg1.namebook;
 
 
     } else {
        document.getElementById("bookreading1").innerHTML = 'Add book';
     }}
-if (readingg2) {    if (readingg2.idkid == kid1id.innerHTML) {
+if (readingg2) {    document.getElementById("readingname2").innerHTML = readingg2.namebook;
+ if (readingg2.idkid == kid1id.innerHTML) {
    document.getElementById("bookreading2").innerHTML = readingg2.namebook;
 
 
     } else {
        document.getElementById("bookreading2").innerHTML = 'Add book';
     }}
-    if (readingg3) {    if (readingg3.idkid == kid1id.innerHTML) {
+    if (readingg3) {   document.getElementById("readingname3").innerHTML = readingg3.namebook;
+       if (readingg3.idkid == kid1id.innerHTML) {
    document.getElementById("bookreading3").innerHTML = readingg3.namebook;
 
 
@@ -281,49 +157,57 @@ if (readingg2) {    if (readingg2.idkid == kid1id.innerHTML) {
        document.getElementById("bookreading3").innerHTML = 'Add book';
     }}
 
-    if (readingg4) {    if (readingg4.idkid == kid1id.innerHTML) {
+    if (readingg4) {       document.getElementById("readingname4").innerHTML = readingg4.namebook;
+
+        if (readingg4.idkid == kid1id.innerHTML) {
    document.getElementById("bookreading4").innerHTML = readingg4.namebook;
 
 
     } else {
        document.getElementById("bookreading4").innerHTML = 'Add book';
     }}
-  if (readingg5) {    if (readingg5.idkid == kid1id.innerHTML) {
+  if (readingg5) {          document.getElementById("readingname5").innerHTML = readingg5.namebook;
+   if (readingg5.idkid == kid1id.innerHTML) {
    document.getElementById("bookreading5").innerHTML = readingg5.namebook;
 
 
     } else {
        document.getElementById("bookreading5").innerHTML = 'Add book';
     }}
-      if (readingg6) {    if (readingg6.idkid == kid1id.innerHTML) {
+      if (readingg6) {         document.getElementById("readingname6").innerHTML = readingg6.namebook;
+        if (readingg6.idkid == kid1id.innerHTML) {
    document.getElementById("bookreading6").innerHTML = readingg6.namebook;
 
 
     } else {
        document.getElementById("bookreading6").innerHTML = 'Add book';
     }}
-      if (readingg7) {    if (readingg7.idkid == kid1id.innerHTML) {
+      if (readingg7) {          document.getElementById("readingname7").innerHTML = readingg7.namebook; 
+        if (readingg7.idkid == kid1id.innerHTML) {
    document.getElementById("bookreading7").innerHTML = readingg7.namebook;
 
 
     } else {
        document.getElementById("bookreading7").innerHTML = 'Add book';
     }}
-  if (readingg8) {    if (readingg8.idkid == kid1id.innerHTML) {
+  if (readingg8) {     document.getElementById("readingname8").innerHTML = readingg8.namebook;
+    if (readingg8.idkid == kid1id.innerHTML) {
    document.getElementById("bookreading8").innerHTML = readingg8.namebook;
 
 
     } else {
        document.getElementById("bookreading8").innerHTML = 'Add book';
     }}
-      if (readingg9) {    if (readingg9.idkid == kid1id.innerHTML) {
+      if (readingg9) {         document.getElementById("readingname9").innerHTML = readingg9.namebook;
+        if (readingg9.idkid == kid1id.innerHTML) {
    document.getElementById("bookreading9").innerHTML = readingg9.namebook;
 
 
     } else {
        document.getElementById("bookreading9").innerHTML = 'Add book';
     }}
-      if (readingg10) {    if (readingg10.idkid == kid1id.innerHTML) {
+      if (readingg10) { document.getElementById("readingname10").innerHTML = readingg10.namebook;
+         if (readingg10.idkid == kid1id.innerHTML) {
    document.getElementById("bookreading10").innerHTML = readingg10.namebook;
 
 
@@ -332,3 +216,309 @@ if (readingg2) {    if (readingg2.idkid == kid1id.innerHTML) {
     }}
 
 }
+
+
+
+
+
+
+
+
+function addbook1() {
+
+   var kid1id = document.getElementById("kid1id"); 
+   var book1id = document.getElementById("book1id"); 
+   var book1name = document.getElementById("book1");  
+  var namereading1 = document.getElementById("readingname1").innerHTML;
+  var namereading2 = document.getElementById("readingname2").innerHTML;
+  var namereading3 = document.getElementById("readingname3").innerHTML;
+  var namereading4 = document.getElementById("readingname4").innerHTML;
+  var namereading5 = document.getElementById("readingname5").innerHTML;
+  var namereading6 = document.getElementById("readingname6").innerHTML;
+  var namereading7 = document.getElementById("readingname7").innerHTML;
+  var namereading8 = document.getElementById("readingname8").innerHTML;
+  var namereading9 = document.getElementById("readingname9").innerHTML;
+  var namereading10 = document.getElementById("readingname10").innerHTML;
+
+
+   var exist = false ; 
+  if (namereading1 == book1name.innerHTML || namereading2 == book1name.innerHTML  || namereading3 == book1name.innerHTML || namereading4 == book1name.innerHTML || namereading5 == book1name.innerHTML || namereading6 == book1name.innerHTML || namereading7 == book1name.innerHTML  || namereading8 == book1name.innerHTML  || namereading9 == book1name.innerHTML  || namereading10 == book1name.innerHTML) { exist = true ;}
+ 
+if (exist) {alert("book is already added")} 
+  else {
+    // Look at each fruit object!
+      var data = {
+  
+  
+  idkid: kid1id.innerHTML,
+  idbook : book1id.innerHTML,
+  namebook : book1name.innerHTML,
+
+}
+reading.push(data);
+    
+   }
+}
+function addbook2() {
+   var kid1id = document.getElementById("kid1id"); 
+   var book2id = document.getElementById("book2id"); 
+   var book1name = document.getElementById("book2");  
+    // Look at each fruit object!
+      var namereading1 = document.getElementById("readingname1").innerHTML;
+  var namereading2 = document.getElementById("readingname2").innerHTML;
+  var namereading3 = document.getElementById("readingname3").innerHTML;
+  var namereading4 = document.getElementById("readingname4").innerHTML;
+  var namereading5 = document.getElementById("readingname5").innerHTML;
+  var namereading6 = document.getElementById("readingname6").innerHTML;
+  var namereading7 = document.getElementById("readingname7").innerHTML;
+  var namereading8 = document.getElementById("readingname8").innerHTML;
+  var namereading9 = document.getElementById("readingname9").innerHTML;
+  var namereading10 = document.getElementById("readingname10").innerHTML;
+
+
+   var exist = false ; 
+  if (namereading1 == book1name.innerHTML || namereading2 == book1name.innerHTML  || namereading3 == book1name.innerHTML || namereading4 == book1name.innerHTML || namereading5 == book1name.innerHTML || namereading6 == book1name.innerHTML || namereading7 == book1name.innerHTML  || namereading8 == book1name.innerHTML  || namereading9 == book1name.innerHTML  || namereading10 == book1name.innerHTML) { exist = true ;}
+ 
+if (exist) {alert("book is already added")} 
+  else {
+      var data = {
+  idkid: kid1id.innerHTML,
+  idbook : book2id.innerHTML,
+  namebook : book1name.innerHTML,
+
+}
+reading.push(data);
+    
+   
+}}
+function addbook3() {
+   var kid1id = document.getElementById("kid1id"); 
+   var book3id = document.getElementById("book3id"); 
+   var book1name = document.getElementById("book3");  
+    // Look at each fruit object!
+      var namereading1 = document.getElementById("readingname1").innerHTML;
+  var namereading2 = document.getElementById("readingname2").innerHTML;
+  var namereading3 = document.getElementById("readingname3").innerHTML;
+  var namereading4 = document.getElementById("readingname4").innerHTML;
+  var namereading5 = document.getElementById("readingname5").innerHTML;
+  var namereading6 = document.getElementById("readingname6").innerHTML;
+  var namereading7 = document.getElementById("readingname7").innerHTML;
+  var namereading8 = document.getElementById("readingname8").innerHTML;
+  var namereading9 = document.getElementById("readingname9").innerHTML;
+  var namereading10 = document.getElementById("readingname10").innerHTML;
+
+
+   var exist = false ; 
+  if (namereading1 == book1name.innerHTML || namereading2 == book1name.innerHTML  || namereading3 == book1name.innerHTML || namereading4 == book1name.innerHTML || namereading5 == book1name.innerHTML || namereading6 == book1name.innerHTML || namereading7 == book1name.innerHTML  || namereading8 == book1name.innerHTML  || namereading9 == book1name.innerHTML  || namereading10 == book1name.innerHTML) { exist = true ;}
+ 
+if (exist) {alert("book is already added")} 
+  else {
+      var data = {
+  idkid: kid1id.innerHTML,
+  idbook : book3id.innerHTML,
+  namebook : book1name.innerHTML,
+
+}
+reading.push(data);
+    
+   
+}}
+function addbook4() {
+   var kid1id = document.getElementById("kid1id"); 
+   var book3id = document.getElementById("book4id"); 
+   var book1name = document.getElementById("book4");  
+    // Look at each fruit object!
+      var namereading1 = document.getElementById("readingname1").innerHTML;
+  var namereading2 = document.getElementById("readingname2").innerHTML;
+  var namereading3 = document.getElementById("readingname3").innerHTML;
+  var namereading4 = document.getElementById("readingname4").innerHTML;
+  var namereading5 = document.getElementById("readingname5").innerHTML;
+  var namereading6 = document.getElementById("readingname6").innerHTML;
+  var namereading7 = document.getElementById("readingname7").innerHTML;
+  var namereading8 = document.getElementById("readingname8").innerHTML;
+  var namereading9 = document.getElementById("readingname9").innerHTML;
+  var namereading10 = document.getElementById("readingname10").innerHTML;
+
+
+   var exist = false ; 
+  if (namereading1 == book1name.innerHTML || namereading2 == book1name.innerHTML  || namereading3 == book1name.innerHTML || namereading4 == book1name.innerHTML || namereading5 == book1name.innerHTML || namereading6 == book1name.innerHTML || namereading7 == book1name.innerHTML  || namereading8 == book1name.innerHTML  || namereading9 == book1name.innerHTML  || namereading10 == book1name.innerHTML) { exist = true ;}
+ 
+if (exist) {alert("book is already added")} 
+  else {
+      var data = {
+  idkid: kid1id.innerHTML,
+  idbook : book3id.innerHTML,
+  namebook : book1name.innerHTML,
+
+}
+reading.push(data);
+    
+   
+}}
+function addbook5() {
+   var kid1id = document.getElementById("kid1id"); 
+   var book3id = document.getElementById("book5id"); 
+   var book1name = document.getElementById("book5");  
+    // Look at each fruit object!
+      var namereading1 = document.getElementById("readingname1").innerHTML;
+  var namereading2 = document.getElementById("readingname2").innerHTML;
+  var namereading3 = document.getElementById("readingname3").innerHTML;
+  var namereading4 = document.getElementById("readingname4").innerHTML;
+  var namereading5 = document.getElementById("readingname5").innerHTML;
+  var namereading6 = document.getElementById("readingname6").innerHTML;
+  var namereading7 = document.getElementById("readingname7").innerHTML;
+  var namereading8 = document.getElementById("readingname8").innerHTML;
+  var namereading9 = document.getElementById("readingname9").innerHTML;
+  var namereading10 = document.getElementById("readingname10").innerHTML;
+
+
+   var exist = false ; 
+  if (namereading1 == book1name.innerHTML || namereading2 == book1name.innerHTML  || namereading3 == book1name.innerHTML || namereading4 == book1name.innerHTML || namereading5 == book1name.innerHTML || namereading6 == book1name.innerHTML || namereading7 == book1name.innerHTML  || namereading8 == book1name.innerHTML  || namereading9 == book1name.innerHTML  || namereading10 == book1name.innerHTML) { exist = true ;}
+ 
+if (exist) {alert("book is already added")} 
+  else {
+      var data = {
+  idkid: kid1id.innerHTML,
+  idbook : book3id.innerHTML,
+  namebook : book1name.innerHTML,
+
+}
+reading.push(data);
+    
+   
+}}
+function addbook6() {
+   var kid1id = document.getElementById("kid1id"); 
+   var book3id = document.getElementById("book6id"); 
+   var book1name = document.getElementById("book6");  
+    // Look at each fruit object!
+      var namereading1 = document.getElementById("readingname1").innerHTML;
+  var namereading2 = document.getElementById("readingname2").innerHTML;
+  var namereading3 = document.getElementById("readingname3").innerHTML;
+  var namereading4 = document.getElementById("readingname4").innerHTML;
+  var namereading5 = document.getElementById("readingname5").innerHTML;
+  var namereading6 = document.getElementById("readingname6").innerHTML;
+  var namereading7 = document.getElementById("readingname7").innerHTML;
+  var namereading8 = document.getElementById("readingname8").innerHTML;
+  var namereading9 = document.getElementById("readingname9").innerHTML;
+  var namereading10 = document.getElementById("readingname10").innerHTML;
+
+
+   var exist = false ; 
+  if (namereading1 == book1name.innerHTML || namereading2 == book1name.innerHTML  || namereading3 == book1name.innerHTML || namereading4 == book1name.innerHTML || namereading5 == book1name.innerHTML || namereading6 == book1name.innerHTML || namereading7 == book1name.innerHTML  || namereading8 == book1name.innerHTML  || namereading9 == book1name.innerHTML  || namereading10 == book1name.innerHTML) { exist = true ;}
+ 
+if (exist) {alert("book is already added")} 
+  else {
+      var data = {
+  idkid: kid1id.innerHTML,
+  idbook : book3id.innerHTML,
+  namebook : book1name.innerHTML,
+
+}
+reading.push(data);
+    
+   
+}}
+function addbook7() {
+   var kid1id = document.getElementById("kid1id"); 
+   var book3id = document.getElementById("book7id"); 
+   var book1name = document.getElementById("book7");  
+    // Look at each fruit object!
+      var namereading1 = document.getElementById("readingname1").innerHTML;
+  var namereading2 = document.getElementById("readingname2").innerHTML;
+  var namereading3 = document.getElementById("readingname3").innerHTML;
+  var namereading4 = document.getElementById("readingname4").innerHTML;
+  var namereading5 = document.getElementById("readingname5").innerHTML;
+  var namereading6 = document.getElementById("readingname6").innerHTML;
+  var namereading7 = document.getElementById("readingname7").innerHTML;
+  var namereading8 = document.getElementById("readingname8").innerHTML;
+  var namereading9 = document.getElementById("readingname9").innerHTML;
+  var namereading10 = document.getElementById("readingname10").innerHTML;
+
+
+   var exist = false ; 
+  if (namereading1 == book1name.innerHTML || namereading2 == book1name.innerHTML  || namereading3 == book1name.innerHTML || namereading4 == book1name.innerHTML || namereading5 == book1name.innerHTML || namereading6 == book1name.innerHTML || namereading7 == book1name.innerHTML  || namereading8 == book1name.innerHTML  || namereading9 == book1name.innerHTML  || namereading10 == book1name.innerHTML) { exist = true ;}
+ 
+if (exist) {alert("book is already added")} 
+  else {
+      var data = {
+  idkid: kid1id.innerHTML,
+  idbook : book3id.innerHTML,
+  namebook : book1name.innerHTML,
+
+}
+reading.push(data);
+    
+   
+}}
+function addbook8() {
+   var kid1id = document.getElementById("kid1id"); 
+   var book3id = document.getElementById("book8id"); 
+   var book1name = document.getElementById("book8");  
+    // Look at each fruit object!
+      var namereading1 = document.getElementById("readingname1").innerHTML;
+  var namereading2 = document.getElementById("readingname2").innerHTML;
+  var namereading3 = document.getElementById("readingname3").innerHTML;
+  var namereading4 = document.getElementById("readingname4").innerHTML;
+  var namereading5 = document.getElementById("readingname5").innerHTML;
+  var namereading6 = document.getElementById("readingname6").innerHTML;
+  var namereading7 = document.getElementById("readingname7").innerHTML;
+  var namereading8 = document.getElementById("readingname8").innerHTML;
+  var namereading9 = document.getElementById("readingname9").innerHTML;
+  var namereading10 = document.getElementById("readingname10").innerHTML;
+
+
+   var exist = false ; 
+  if (namereading1 == book1name.innerHTML || namereading2 == book1name.innerHTML  || namereading3 == book1name.innerHTML || namereading4 == book1name.innerHTML || namereading5 == book1name.innerHTML || namereading6 == book1name.innerHTML || namereading7 == book1name.innerHTML  || namereading8 == book1name.innerHTML  || namereading9 == book1name.innerHTML  || namereading10 == book1name.innerHTML) { exist = true ;}
+ 
+if (exist) {alert("book is already added")} 
+  else {
+      var data = {
+  idkid: kid1id.innerHTML,
+  idbook : book3id.innerHTML,
+  namebook : book1name.innerHTML,
+
+}
+reading.push(data);
+    
+   
+}}
+function addbook9() {
+   var kid1id = document.getElementById("kid1id"); 
+   var book3id = document.getElementById("book9id"); 
+   var book1name = document.getElementById("book9");  
+    // Look at each fruit object!
+      var namereading1 = document.getElementById("readingname1").innerHTML;
+  var namereading2 = document.getElementById("readingname2").innerHTML;
+  var namereading3 = document.getElementById("readingname3").innerHTML;
+  var namereading4 = document.getElementById("readingname4").innerHTML;
+  var namereading5 = document.getElementById("readingname5").innerHTML;
+  var namereading6 = document.getElementById("readingname6").innerHTML;
+  var namereading7 = document.getElementById("readingname7").innerHTML;
+  var namereading8 = document.getElementById("readingname8").innerHTML;
+  var namereading9 = document.getElementById("readingname9").innerHTML;
+  var namereading10 = document.getElementById("readingname10").innerHTML;
+
+
+   var exist = false ; 
+  if (namereading1 == book1name.innerHTML || namereading2 == book1name.innerHTML  || namereading3 == book1name.innerHTML || namereading4 == book1name.innerHTML || namereading5 == book1name.innerHTML || namereading6 == book1name.innerHTML || namereading7 == book1name.innerHTML  || namereading8 == book1name.innerHTML  || namereading9 == book1name.innerHTML  || namereading10 == book1name.innerHTML) { exist = true ;}
+ 
+if (exist) {alert("book is already added")} 
+  else {
+      var data = {
+  idkid: kid1id.innerHTML,
+  idbook : book3id.innerHTML,
+  namebook : book1name.innerHTML,
+
+}
+reading.push(data);
+    
+   
+}
+}
+
+
+
+
+
+
