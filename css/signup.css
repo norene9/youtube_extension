@@ -14,3 +14,12 @@ body{
 .logo > img {
  width: 10%;
 }
+
+.title{
+ font-size: 24px;
+}
+
+.error{
+ color: #D8000C;
+ background-color: #FFBABA;
+}

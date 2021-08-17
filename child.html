@@ -18,26 +18,31 @@
  </div>
  <div class="">
   <p>Welcome !</p>
-  <h1>time eo watch</h1>
-  <form id="time" action="time" > 
-      
-
-hours<input type="number" min="-1" max="24" step="1" autocomplete="off"  name="hours"   id="h"  >
-<br>
-minutes
-<input type="number" min="-1" max="60" step="1" autocomplete="off"  name="minutes" id="m">
-<br> 
-seconds
-<input type="number" min="-1" max="60" step="1" autocomplete="off"  name="seconds" id="s"> 
-  
-<button type="submit" class="btn">submit</button>
-</form>
+ </div>
+ <div id="kids">
+  <!-- <div class="item">
+  <img src="images/kid1.png" alt="Snow" style="width:100%" class="image">
+  <p class="kidsName">name</p>
+ here we show the kids
+</div>-->
  </div>
  <button type="submit" class="btn" id="dashboard">Dashboard</button>
  <footer>
+   <div class="timer">
+  <p class="timeToWatch">time to watch</p>
+
+  <form id="time" action="time">
+    hours<input type="number" min="-1" max="24" step="1" autocomplete="off" name="hours" id="h">
+    minutes<input type="number" min="-1" max="60" step="1" autocomplete="off" name="minutes" id="m">
+    seconds<input type="number" min="-1" max="60" step="1" autocomplete="off" name="seconds" id="s">
+    <button type="submit" class="btn">submit</button>
+  </form> 
+
+  </div>
   <form action="" id="signOut">
   <button type="submit" class="btn" > Sign out </button>
   </form>
+  
  </footer>
  <script src="backChild.js"></script>
  <script src="scripts/index.js"></script>

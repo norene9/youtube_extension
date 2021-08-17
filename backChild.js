@@ -18,7 +18,7 @@ var currentUrl='';
 getTime();
 function getTime(){
   
-  chrome.storage.local.get(/* String or Array */["time"], function(items){
+  chrome.storage.local.get(/* String or Array*/ ["time"], function(items){
     //  items = [ { "phasersTo": "awesome" } ]
     if(chrome.runtime.lastError)
     {
@@ -148,3 +148,46 @@ else{
   console.log("oups !!")
 });
   }
+
+  firebase.auth().onAuthStateChanged(function(user){
+    if(user){
+      //console.log(user);
+    }else{
+      console.log('cheppi');
+    }
+  });
+
+  var kids = document.getElementById("kids");
+
+function renderkid(data){
+  let div = document.createElement('div');
+  div.setAttribute("class","item");
+
+  var img = document.createElement("img");
+  if (data.sexe == "girl"){
+    img.src = "images/kid1.png";
+  }else{
+    img.src = "images/kid2.png";
+  }
+  img.setAttribute("class","image")
+
+  var p = document.createElement('p');
+  p.textContent =data.name;
+  p.setAttribute("class","kidsName");
+
+  div.appendChild(img); 
+  div.appendChild(p);
+
+ kids.appendChild(div);
+}
+
+var database = firebase.database().ref('kids');
+database.on('value', (snapshot) => {
+  const data = snapshot.val();
+  for (var key in data){
+    //console.log(data[key].id);
+    renderkid(data[key]);
+  }
+});
+
+

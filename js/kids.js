@@ -69,4 +69,4 @@ function gotData(data) {
     document.getElementById("kid5").innerHTML = kid5.name;
 
 
-}
+};

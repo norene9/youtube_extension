@@ -59,6 +59,11 @@ input{
  text-align: center;
  font-size: 16px;
 }
-p{
+.title{
  font-size: 24px;
+}
+
+.error{
+ color: #D8000C;
+ background-color: #FFBABA;
 }

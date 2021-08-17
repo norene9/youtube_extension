@@ -17,12 +17,12 @@ var firebaseConfig = {
     var psw=document.forms["formSignup"]["psw"].value;
     var confirmPsw=document.forms["formSignup"]["confirmPsw"].value;
     var username=document.forms["formSignup"]["username"].value;
-    if (psw != confirmPsw){
-      alert("password doesn't match");
-      return false;
-    }else if (email == "" || psw == "" || confirmPsw == "" || username == "") {
-    alert("all fields must be filled out");
-    return false;
+    if (email == "" || psw == "" || confirmPsw == "" || username == "") {
+   document.getElementById('errorname').innerHTML="All fields must be filled out";
+      return false; 
+    }else if (psw != confirmPsw){
+      document.getElementById('errorname').innerHTML="password does not match";
+      return false; 
     }else{
       firebase.auth().createUserWithEmailAndPassword(email, psw)
       .then((userCredential) => {
@@ -37,6 +37,7 @@ var firebaseConfig = {
         var errorCode = error.code;
         var errorMessage = error.message;
         console.log("oups!");
+        document.getElementById('errorname').innerHTML=errorMessage;
         console.log(errorCode,errorMessage);
       });
     }

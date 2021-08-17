@@ -31,13 +31,56 @@ body{
 p{
  font-size: 24px;
 }
+
 .btn{
  background-color: #FBD5DE;
- margin: 25px;
+ /*margin: 25px;*/
  padding: 10px 20px;
  border: none;
 }
 
 footer {
  position: absolute; 
- bottom: 0;}
+ bottom: 0;
+}
+
+.timeToWatch{
+ font-size: 12px;
+ font-weight: bold;
+}
+
+#time{
+ margin: 0;
+ padding: 0;
+}
+
+.timer:first-child{
+ text-align: center;
+}
+
+#kids{
+ display: flex;
+ text-align: center;
+ justify-content: center;
+ align-items: center;
+}
+
+.image{
+ width: 93px;
+ height: 93px;
+ border: 2px solid ;
+ border-radius: 10px 10px 0px 0px ; 
+}
+
+.kidsName{
+ font-size: 17px;
+ margin: 0;
+ background-color: #FA4141;
+ color: #fff;
+ margin-top: -4px;
+ border-radius: 0px 0px 6px 6px;
+}
+
+.item{
+ padding: 10px;
+}

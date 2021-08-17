@@ -16,8 +16,8 @@ var firebaseConfig = {
     var user=document.forms["formLogin"]["user"].value;
     var password=document.forms["formLogin"]["password"].value;
     if (user == "" || password == "") {
-    alert("user and password must be filled out");
-    return false;
+      document.getElementById('errorname').innerHTML="All fields must be filled out";
+      return false; 
     }else{
       firebase.auth().signInWithEmailAndPassword(user, password)
   .then((userCredential) => {
@@ -33,6 +33,7 @@ var firebaseConfig = {
     var errorCode = error.code;
     var errorMessage = error.message;
     console.log("oups!");
+    document.getElementById('errorname').innerHTML=errorMessage;
     console.log(errorCode,errorMessage);
   });
 
