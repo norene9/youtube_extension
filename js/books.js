@@ -28,3 +28,20 @@ function validateForm() {
 books.push(data);
   }
 }
+
+window.onload=function(){
+
+
+  var uploader = document.getElementById('uploader');
+  var fileButton = document.getElementById('fileButton');
+  fileButton.addEventListener('change', function(e){
+for (let i = 0; i < e.target.files.length; i++) {
+ 
+  var file = e.target.files[i];
+    var storageRef = firebase.storage().ref('pdf/'+file.name);
+      var task = storageRef.put(file);
+}
+
+
+
+});  
