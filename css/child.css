@@ -1,0 +1,86 @@
+body{
+ width: 400px;
+ min-height: 500px;
+ margin: 0;
+ background-color: #FFFBDB;
+ text-align: center;
+ position: relative;
+}
+
+.logo{
+ background-color: #FF0505;
+ width: 100%;
+}
+
+.logo > img {
+ width: 10%;
+}
+
+.form{
+ display: flex;
+ flex-direction: column;
+ justify-content: center;
+ align-items: center;
+ margin: 50px 40px;
+ margin-bottom: 25px;
+ border: 1px solid;
+ border-radius: 30px;
+ box-shadow: 0 2px 0 0  darkgray;
+}
+
+p{
+ font-size: 24px;
+}
+
+.btn{
+ background-color: #FBD5DE;
+ /*margin: 25px;*/
+ padding: 10px 20px;
+ border: none;
+}
+
+footer {
+ position: absolute; 
+ bottom: 0;
+}
+
+.timeToWatch{
+ font-size: 12px;
+ font-weight: bold;
+}
+
+#time{
+ margin: 0;
+ padding: 0;
+}
+
+.timer:first-child{
+ text-align: center;
+}
+
+#kids{
+ display: flex;
+ text-align: center;
+ justify-content: center;
+ align-items: center;
+}
+
+.image{
+ width: 93px;
+ height: 93px;
+ border: 2px solid ;
+ border-radius: 10px 10px 0px 0px ; 
+}
+
+.kidsName{
+ font-size: 17px;
+ margin: 0;
+ background-color: #FA4141;
+ color: #fff;
+ margin-top: -4px;
+ border-radius: 0px 0px 6px 6px;
+}
+
+.item{
+ padding: 10px;
+}

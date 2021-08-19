@@ -1,0 +1,54 @@
+{
+    "update_url": "https://clients2.google.com/service/update2/crx",
+ "name": "Youtube Extension",
+ "description": "Extension pour faire le suivie des enfants",
+ "version": "1.0.0",
+ "content_scripts":
+[
+    {
+    "matches":[
+        "*://www.youtube.com/*" 
+    ],
+    "js":["p5.js","p5.min.js","content.js"]
+}
+],"options_page": "index.html",
+"icons": {
+   "16": "icons/16x16.png",
+   "32": "icons/32x32.png",
+   "48": "icons/48x48.png",
+   "128": "icons/128x128.png"
+},
+
+ "background": {
+  "scripts": ["scripts/common.js", 
+    "scripts/storage.js", 
+    "scripts/activity.js", 
+    "scripts/tab.js", 
+    "scripts/timeInterval.js",
+    "scripts/background.js",
+    "scripts/restriction.js"
+    
+   
+],   
+  "persistent": true
+ },
+ 
+ "browser_action": {
+  "default_popup":"login.html"
+ },
+ "permissions":
+ ["webNavigation", "tabs",
+    "activeTab",
+    "storage",
+    "idle",
+    "chrome://favicon/*",
+    "webNavigation",
+    "https://www.youtube.com/*",
+    
+    "unlimitedStorage"],
+    
+
+    "offline_enabled": true,
+ "manifest_version": 2,
+ "content_security_policy": "script-src-elem 'self' blob: filesystem: unsafe-inline 'sha256-Ql3n7tC/2D6wSTlQY8RcOKXhq02zfdaSDviOhpvbYWw=' https://s-usc1c-nss-358.firebaseio.com/.lp  https://www.googleapis.com/identitytoolkit/v3/relyingparty/verifyPassword https://www.googleapis.com/identitytoolkit/v3/relyingparty/getAccountInfo https://www.googleapis.com/identitytoolkit/v3/relyingparty/signupNewUser https://securetoken.googleapis.com/v1/token wss://s-usc1c-nss-360.firebaseio.com/.ws wss://kids-7b59b-default-rtdb.firebaseio.com/* wss://s-usc1c-nss-359.firebaseio.com/.ws https://www.gstatic.com/firebasejs/8.8.1/firebase-app.js https://www.gstatic.com/firebasejs/8.8.1/firebase.js https://www.gstatic.com/firebasejs/8.8.1/firebase-auth.js https://www.gstatic.com/firebasejs/8.8.1/firebase-database.js https://kids-7b59b-default-rtdb.firebaseio.com/.lp https://s-usc1c-nss-360.firebaseio.com/.lp https://s-usc1c-nss-359.firebaseio.com/.lp ;object-src 'self'; connect-src 'self' https://firebasestorage.googleapis.com/v0/b/kids-7b59b.appspot.com/o https://firebasestorage.googleapis.com/v0/b/kids-7b59b.appspot.com wss://s-usc1c-nss-358.firebaseio.com/ https://www.googleapis.com/identitytoolkit/v3/relyingparty/verifyPassword https://www.googleapis.com/identitytoolkit/v3/relyingparty/getAccountInfo https://www.googleapis.com/identitytoolkit/v3/relyingparty/signupNewUser https://securetoken.googleapis.com/v1/token wss://s-usc1c-nss-360.firebaseio.com/.ws wss://kids-7b59b-default-rtdb.firebaseio.com/* wss://s-usc1c-nss-359.firebaseio.com/.ws;  frame-src 'self' https://s-usc1c-nss-360.firebaseio.com/ https://s-usc1c-nss-359.firebaseio.com/; default-src 'self'"
+}
