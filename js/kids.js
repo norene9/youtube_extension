@@ -10,6 +10,7 @@
   // Initialize Firebase
   firebase.initializeApp(firebaseConfig);
   console.log(firebase);
+  var uid = localStorage.getItem("uid");
  var database = firebase.database();
  var kids = database.ref('kids');
 function validateForm() {
@@ -22,8 +23,7 @@ function validateForm() {
      var data = {
   name: name,
   age : age,
- 
-
+  uid : uid,
 }
 kids.push(data);
   }

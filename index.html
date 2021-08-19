@@ -19,6 +19,9 @@
     
     <!-- Style -->
     <link rel="stylesheet" href="css/style.css">
+    <script src="https://www.gstatic.com/firebasejs/8.8.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.8.1/firebase.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.8.1/firebase-auth.js"></script>
 
     <title>Home</title>
   </head>
@@ -48,7 +51,10 @@
             <li><a href="./kids.html">Kids</a></li>
             <li><a href="./books.html">Books</a></li>
             <li><a href='./options.html'>Limits</a></li>
-            <li><a href="#">Sign out</a></li>
+            <li><a href="#">
+              <form action="" id="signOut">
+                <button type="submit" class="btn"> Sign out </button>
+            </a></li>
           </ul>
         </div>
       </div>

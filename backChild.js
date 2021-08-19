@@ -11,14 +11,14 @@ var firebaseConfig = {
   // Initialize Firebase
   firebase.initializeApp(firebaseConfig);
   console.log(firebase);
-  console.log("bg running");
+/*  console.log("bg running");
 var condition=false
 var t=9000000000000000;
 var currentUrl='';
 getTime();
 function getTime(){
   
-  chrome.storage.local.get(/* String or Array*/ ["time"], function(items){
+  chrome.storage.local.get(/* String or Array ["time"], function(items){
     //  items = [ { "phasersTo": "awesome" } ]
     if(chrome.runtime.lastError)
     {
@@ -132,7 +132,7 @@ else{
   
 }
 
-},1000)
+},1000)*/
   document.getElementById("signOut").addEventListener("submit",signedOut);
   function signedOut(evt){
    evt.preventDefault();
@@ -141,6 +141,7 @@ else{
    chrome.runtime.sendMessage({ message: 'sign_out' }, function (response) {
         if (response.message === 'success') {
             window.location.replace('./login.html');
+            Storage.clear();
         }
     });
 }).catch((error) => {
@@ -149,17 +150,22 @@ else{
 });
   }
 
-  firebase.auth().onAuthStateChanged(function(user){
-    if(user){
-      //console.log(user);
-    }else{
-      console.log('cheppi');
-    }
-  });
+  firebase.auth().onAuthStateChanged((user) => {
+  if (user) {
+    var uid = user.uid;
+    console.log(uid);
+    localStorage.setItem("uid", uid);
+  } else {
+    // User is signed out
+    // ...
+  }
+});
 
-  var kids = document.getElementById("kids");
+  var kids1 = document.getElementById("kids1");
+  var kids2 = document.getElementById("kids2");
 
-function renderkid(data){
+function renderkid(data, i){
+  
   let div = document.createElement('div');
   div.setAttribute("class","item");
 
@@ -177,16 +183,25 @@ function renderkid(data){
 
   div.appendChild(img); 
   div.appendChild(p);
-
- kids.appendChild(div);
+  
+  if (i<=3){
+    kids1.appendChild(div);
+  }else{
+    kids2.appendChild(div);
+  }
 }
 
 var database = firebase.database().ref('kids');
+var i = 0;
 database.on('value', (snapshot) => {
   const data = snapshot.val();
   for (var key in data){
     //console.log(data[key].id);
-    renderkid(data[key]);
+    i++;
+    
+    renderkid(data[key],i);
+  
+    
   }
 });
 

@@ -37,11 +37,10 @@ p{
  /*margin: 25px;*/
  padding: 10px 20px;
  border: none;
+ cursor: pointer;
 }
 
-footer {
- position: absolute; 
- bottom: 0;
+footer { 
 }
 
 .timeToWatch{
@@ -58,7 +57,14 @@ footer {
  text-align: center;
 }
 
-#kids{
+#kids1{
+ display: flex;
+ text-align: center;
+ justify-content: center;
+ align-items: center;
+}
+
+#kids2{
  display: flex;
  text-align: center;
  justify-content: center;

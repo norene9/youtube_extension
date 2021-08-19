@@ -371,3 +371,11 @@ main {
 
 .burger:focus {
   outline: none; }
+
+  #signOut{
+    border: #fff;
+  }
+
+  .btn{
+    color: #8b8b8b;
+  }

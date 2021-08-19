@@ -46,6 +46,7 @@ input{
  margin: 25px;
  padding: 10px 20px;
  border: none;
+ cursor: pointer;
 }
 
 .fpswd{
